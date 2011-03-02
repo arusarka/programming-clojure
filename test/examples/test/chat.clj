@@ -1,5 +1,5 @@
 (ns examples.test.chat
-  (:use clojure.contrib.test-is)
+  (:use clojure.test)
   (:require examples.chat))
 
 (alias 'c 'examples.chat)

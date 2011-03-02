@@ -63,7 +63,7 @@
 (def broken-select-snippets select-snippets)
 
 (defmulti coerce (fn [dest-class src-inst] [dest-class (class src-inst)]))
-(defmethod coerce [Integer String] [_ inst] (Integer/parseInt inst))
+(defmethod coerce [Long String] [_ inst] (Long/parseLong inst))
 (defmethod coerce :default [dest-cls obj] (cast dest-cls obj))
 
 ; START: select-snippets
@@ -79,7 +79,7 @@
 
 (defn select-snippet [id]
   (with-connection db
-    (first (sql-query ["select * from snippets where id = ?" (coerce Integer id)]))))
+    (first (sql-query ["select * from snippets where id = ?" (coerce Long id)]))))
 
 ; START: last-created-id
 (defn last-created-id 

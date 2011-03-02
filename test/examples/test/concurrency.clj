@@ -1,12 +1,10 @@
 (ns examples.test.concurrency
-  (:use clojure.contrib.test-is examples.concurrency examples.chat
-	clojure.contrib.duck-streams))
-
+  (:use clojure.test examples.concurrency examples.chat
+        [clojure.java.io :only (reader)]))
 
 (deftest test-next-counter
   (dosync (ref-set counter 0))
-  (is (= (next-counter) 1))
-)
+  (is (= (next-counter) 1)))
 
 (deftest test-slow-double
   (is (= [2 4 2 4 2 4] (calls-slow-double))))
@@ -23,7 +21,6 @@
     (add-message-with-backup msg)
     (await backup-agent)
     (is (= (read (java.io.PushbackReader. (reader "output/messages-backup.clj")))
-	   (list msg)))
-))
+	   (list msg)))))
 
   

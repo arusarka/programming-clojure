@@ -1,7 +1,5 @@
 (ns examples.test.trampoline
-  (:use clojure.contrib.test-is 
-        examples.trampoline
-        [clojure.contrib.seq-utils :only (indexed)]))
+  (:use clojure.test examples.trampoline))
 
 (def ten-fibs [0 1 1 2 3 5 8 13 21 34])
 

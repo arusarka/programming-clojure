@@ -1,6 +1,6 @@
 ; START:ns
 (ns examples.exploring
-    (:use examples.utils clojure.contrib.str-utils)
+    (:require [clojure.string :as str])
     (:import (java.io File)))
 ; END:ns
 
@@ -86,7 +86,7 @@
 ; START:indexable-words 
 (defn indexable-words [text]
   (let [indexable-word? (fn [w] (> (count w) 2))]
-    (filter indexable-word? (re-split #"\W+" text))))
+    (filter indexable-word? (str/split text #"\W+"))))
 ; END:indexable-words
 
 ; START:make-greeter
@@ -121,8 +121,8 @@
 ; END:greet-author-2
 
 ; START:ellipsize
-(use '[clojure.contrib.str-utils :only (re-split str-join)]) 
+(require '[clojure.string :as str]) 
 (defn ellipsize [words]
-  (let [[w1 w2 w3] (re-split #"\s+" words)]
-    (str-join " " [w1 w2 w3 "..."])))
+  (let [[w1 w2 w3] (str/split words #"\s+")]
+    (str/join " " [w1 w2 w3 "..."])))
 ; END:ellipsize

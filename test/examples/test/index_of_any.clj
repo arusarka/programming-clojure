@@ -1,6 +1,6 @@
 ; START:test-is
 (ns examples.test.index-of-any
-    (:use examples.index-of-any clojure.contrib.test-is))
+    (:use examples.index-of-any clojure.test))
 
 (deftest test-index-of-any-with-nil-args
   (is (nil? (index-of-any #{\a} nil)))

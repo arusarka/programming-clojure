@@ -1,4 +1,5 @@
 lib/*
+classes/*
 /Programming-Clojure.iml
 /build.clj
 /hello.out

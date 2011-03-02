@@ -1,7 +1,7 @@
 # Sample Code for Programming Clojure
 
 http://www.pragprog.com/titles/shcloj/programming-clojure
-Copyright 2008-2010 Stuart Halloway. All rights reserved. 
+Copyright 2008-2011 Stuart Halloway. All rights reserved. 
 
 # Important Notice
 

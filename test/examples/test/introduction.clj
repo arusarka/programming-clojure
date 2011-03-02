@@ -1,5 +1,5 @@
 (ns examples.test.introduction
-  (:use clojure.contrib.test-is)
+  (:use clojure.test)
   (:use examples.introduction))
 
 (deftest test-blank?

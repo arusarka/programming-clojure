@@ -1,5 +1,5 @@
 (ns examples.test.preface
-  (:use clojure.contrib.test-is))
+  (:use clojure.test))
 
 (deftest test-load-preface
   (is (= "hello\n" 

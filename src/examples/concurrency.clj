@@ -10,7 +10,7 @@
 ; END: next-counter
 
 ; START: slow-double
-(defn slow-double [n]
+(defn ^:dynamic slow-double [n]
   (Thread/sleep 100)
   (* n 2))
 ; END: slow-double
@@ -33,7 +33,6 @@
 ; END: backup-agent
 
 ; START: add-message-with-backup
-(use '[clojure.contrib.duck-streams :only (spit)])
 (defn add-message-with-backup [msg]
   (dosync 
    (let [snapshot (commute messages conj msg)]

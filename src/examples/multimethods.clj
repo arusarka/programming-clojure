@@ -31,17 +31,17 @@
 ; END: defmethod-default
 
 ; START: defmethod-collection
-(use '[clojure.contrib.str-utils :only (str-join)])
+(require '[clojure.string :as str])
 (defmethod my-print java.util.Collection [c]
   (.write *out* "(")
-  (.write *out* (str-join " " c))
+  (.write *out* (str/join " " c))
   (.write *out* ")"))
 ; END: defmethod-collection
 
 ; START: defmethod-vector
 (defmethod my-print clojure.lang.IPersistentVector [c]
   (.write *out* "[")
-  (.write *out* (str-join " " c))
+  (.write *out* (str/join " " c))
   (.write *out* "]"))
 ; END: defmethod-vector
 

@@ -1,9 +1,9 @@
 (ns examples.test.snippet
-    (:use clojure.contrib.test-is clojure.contrib.sql examples.snippet))
+    (:use clojure.test clojure.contrib.sql examples.snippet))
 
 (deftest insert-and-select-some-snippets
   (let [stub-time (now)]
-    (binding [now (fn [] stub-time)]
+    (with-redefs [now (fn [] stub-time)]
       (sample-snippets)
       (is (= [{:id 0, :body "(println :boo)", :created_at stub-time}
 	      {:id 1, :body "(defn foo [] 1)", :created_at stub-time}]

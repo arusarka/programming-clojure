@@ -1,9 +1,8 @@
-(ns examples.index-of-any
-    (:use clojure.contrib.seq-utils))
+(ns examples.index-of-any)
 
 ; START: index-of-any
 (defn index-filter [pred coll]
-  (when pred (for [[idx elt] (indexed coll) :when (pred elt)] idx)))  
+  (when pred (keep-indexed (fn [idx item] (when (pred item) idx)) coll)))  
 
 (defn 
   #^{:test (fn []

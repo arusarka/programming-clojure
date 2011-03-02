@@ -17,7 +17,7 @@
 	   (if (zero? n)
 	     current       ; <label id="code.tail-fibo.terminate"/>
 	     (fib next (+ current next) (dec n))))] ; <label id="code.tail-fibo.recur"/>
-    (fib 0 1 n))) ; <label id="code.tail-fibo.call"/>
+    (fib 0N 1N n))) ; <label id="code.tail-fibo.call"/>
 ; END: tail-fibo
 
 ; START: recur-fibo    

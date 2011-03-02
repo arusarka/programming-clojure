@@ -1,5 +1,5 @@
 (ns examples.test
-  (:use clojure.contrib.test-is))
+  (:use clojure.test))
 
 (def examples-tests 
      (map #(symbol (str "examples.test." (name %)))

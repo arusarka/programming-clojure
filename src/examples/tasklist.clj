@@ -3,7 +3,7 @@
    :extends org.xml.sax.helpers.DefaultHandler
    :init init
    :state state)
-  (:use [clojure.contrib.duck-streams :only (reader)])
+  (:use [clojure.java.io :only (reader)])
   (:import [java.io File]
            [org.xml.sax InputSource]
 	   [org.xml.sax.helpers DefaultHandler]

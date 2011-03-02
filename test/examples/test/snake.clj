@@ -1,5 +1,5 @@
 (ns examples.test.snake
-  (:use clojure.contrib.test-is examples.snake))
+  (:use clojure.test examples.snake))
 
 (deftest test-add-points
   (is (= [2,0] (add-points [1,1] [1,-1])))

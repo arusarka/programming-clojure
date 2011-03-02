@@ -65,7 +65,7 @@
 ; END:filter
 
 ; START:clojure-loc
-(use '[clojure.contrib.duck-streams :only (reader)])
+(use '[clojure.java.io :only (reader)])
 (defn non-blank? [line] (if (re-find #"\S" line) true false))
 
 (defn non-svn? [file] (not (.contains (.toString file) ".svn")))

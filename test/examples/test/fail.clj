@@ -1,5 +1,5 @@
 (ns examples.test.fail
-    (:use examples.index-of-any clojure.contrib.test-is))
+    (:use examples.index-of-any clojure.test))
 
 ; START:test-is-failure
 (deftest test-that-demonstrates-failure

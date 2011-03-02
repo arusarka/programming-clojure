@@ -1,5 +1,5 @@
 (ns examples.test.tasklist
-  (:use clojure.contrib.test-is)
+  (:use clojure.test)
   (:require examples.tasklist))
 
 (deftest tasklist-main

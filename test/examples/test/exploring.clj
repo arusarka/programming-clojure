@@ -1,6 +1,5 @@
 (ns examples.test.exploring
-  (:use clojure.contrib.test-is)
-  (:use examples.exploring))
+  (:use clojure.test examples.exploring))
 
 (defn call-date [& args]
   (with-out-str (apply date args)))

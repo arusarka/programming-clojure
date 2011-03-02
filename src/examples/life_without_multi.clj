@@ -22,10 +22,10 @@
 (def my-print-2 my-print)
 
 ; START: my-println-3
-(use '[clojure.contrib.str-utils :only (str-join)])
+(require '[clojure.string :as str])
 (defn my-print-vector [ob]
   (.write *out*"[")
-  (.write *out* (str-join " " ob))
+  (.write *out* (str/join " " ob))
   (.write *out* "]"))
 
 (defn my-print [ob] 

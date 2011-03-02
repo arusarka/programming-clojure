@@ -1,5 +1,5 @@
 (ns examples.test.lazy-index-of-any
-    (:use examples.lazy-index-of-any clojure.contrib.test-is))
+    (:use examples.lazy-index-of-any clojure.test))
 
 (deftest test-lazy-index-of-any-with-match
   (is (= (with-out-str (is (zero? (index-of-any #{\z \a} "zzabyycdxx"))))

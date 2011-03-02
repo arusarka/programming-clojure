@@ -1,5 +1,5 @@
 (ns examples.test.interop
-  (:use clojure.contrib.test-is)
+  (:use clojure.test)
   (:use examples.interop))
 
 (deftest sum-to-variants
